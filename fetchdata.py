@@ -13,7 +13,7 @@ mysql = MySQL(app)
 
 @app.route('/')
 def method_name():
-    return "this program is used to fetch data fron database and show on browser"
+    return "these functions is used to fetch data fron database and show on browser"
 
 
 @app.route('/create')
@@ -76,12 +76,12 @@ def fetchjson():
     return jsonify(show)
 
 
-@app.route('/EmptyTable')
+@app.route('/ETable')
 def ETable():
-    return render_template('table.html')
+    return render_template('Emptytable.html')
 
 
-@app.route('/newtable', methods=['POST'])
+@app.route('/newtable')
 def Ftable():
     query = "SELECT * FROM onecrop "
     cur = mysql.connection.cursor()
